@@ -30,9 +30,7 @@ public class StatsLogCompat {
      */
     public static void write(int action, int srcState, int dstState, byte [] extension,
             boolean swipeUpEnabled) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) return;
-        StatsLog.write(19, action, srcState, dstState, extension,
-                swipeUpEnabled);
+        return;
     }
 
     /**
@@ -45,10 +43,6 @@ public class StatsLogCompat {
             int fontPackageHash, int shapePackageHash, int clockPackageHash,
             int launcherGrid, int wallpaperCategoryHash, int wallpaperIdHash,
             int colorPreference, int locationPreference) {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) return;
-        StatsLog.write(179, action, colorPackageHash,
-                fontPackageHash, shapePackageHash, clockPackageHash,
-                launcherGrid, wallpaperCategoryHash, wallpaperIdHash,
-                colorPreference, locationPreference);
+        return;
     }
 }
